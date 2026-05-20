@@ -1,0 +1,214 @@
+/* =========================================
+   ESTILOS - SIMULADOR DE TRANSFERENCIA DE CALOR
+   Ejercicio 1 - Desafío Técnico Web
+   ========================================= */
+
+/* ---------- Reset y configuración base ---------- */
+* {
+  box-sizing: border-box; /* Incluye padding y borde en el tamaño total */
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f4f8;
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 16px;
+}
+
+/* ---------- Contenedor principal ---------- */
+.contenedor {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  width: 100%;
+  max-width: 560px;
+}
+
+/* ---------- Encabezado ---------- */
+header {
+  text-align: center;
+  margin-bottom: 28px;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 20px;
+}
+
+header h1 {
+  font-size: 1.6rem;
+  color: #1a202c;
+  margin-bottom: 6px;
+}
+
+.subtitulo {
+  font-size: 0.95rem;
+  color: #718096;
+  font-style: italic;
+}
+
+/* ---------- Caja de fórmula ---------- */
+.formula-box {
+  background-color: #ebf8ff;
+  border-left: 4px solid #3182ce;
+  border-radius: 6px;
+  padding: 14px 18px;
+  margin-bottom: 28px;
+}
+
+.formula-box p {
+  font-size: 0.9rem;
+  color: #2c5282;
+  margin-bottom: 6px;
+}
+
+.formula {
+  font-size: 1.05rem;
+  font-weight: bold;
+  color: #1a365d;
+  letter-spacing: 0.5px;
+}
+
+/* ---------- Formulario ---------- */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* Cada campo: etiqueta + input apilados */
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+label {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #4a5568;
+}
+
+input[type="number"] {
+  padding: 10px 14px;
+  border: 1.5px solid #cbd5e0;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #2d3748;
+  background-color: #f7fafc;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  width: 100%;
+}
+
+/* Efecto al hacer foco en el input */
+input[type="number"]:focus {
+  outline: none;
+  border-color: #3182ce;
+  box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.15);
+  background-color: #fff;
+}
+
+/* ---------- Botones ---------- */
+#boton-calcular {
+  margin-top: 8px;
+  padding: 12px 0;
+  background-color: #3182ce;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+#boton-calcular:hover {
+  background-color: #2b6cb0;
+}
+
+#boton-calcular:active {
+  transform: scale(0.98);
+}
+
+#boton-limpiar {
+  padding: 10px 0;
+  background-color: #ffffff;
+  color: #718096;
+  font-size: 0.9rem;
+  border: 1.5px solid #cbd5e0;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+#boton-limpiar:hover {
+  background-color: #edf2f7;
+  color: #4a5568;
+}
+
+/* ---------- Caja de resultado ---------- */
+.resultado-box {
+  margin-top: 28px;
+  background-color: #f0fff4;
+  border: 2px solid #38a169;
+  border-radius: 10px;
+  padding: 22px 24px;
+  text-align: center;
+}
+
+.resultado-box h2 {
+  font-size: 1rem;
+  color: #276749;
+  margin-bottom: 6px;
+}
+
+.resultado-box p {
+  font-size: 0.9rem;
+  color: #4a5568;
+  margin-bottom: 10px;
+}
+
+/* El número grande del resultado */
+.resultado-valor {
+  font-size: 2.5rem !important;
+  font-weight: bold;
+  color: #276749 !important;
+  margin: 0 !important;
+}
+
+/* ---------- Caja de error ---------- */
+.error-box {
+  margin-top: 20px;
+  background-color: #fff5f5;
+  border: 2px solid #fc8181;
+  border-radius: 10px;
+  padding: 14px 18px;
+  text-align: center;
+}
+
+.error-box p {
+  color: #c53030;
+  font-size: 0.9rem;
+}
+
+/* ---------- Clase para ocultar elementos ---------- */
+.oculto {
+  display: none;
+}
+
+/* ---------- Pie de página ---------- */
+footer {
+  margin-top: 36px;
+  text-align: center;
+  padding-top: 18px;
+  border-top: 1px solid #e2e8f0;
+}
+
+footer p {
+  font-size: 0.78rem;
+  color: #a0aec0;
+}
